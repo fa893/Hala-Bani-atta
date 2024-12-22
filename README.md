@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -17,6 +17,15 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            position: relative;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
         }
         header h1 {
             margin: 0;
@@ -108,6 +117,7 @@
 </head>
 <body>
     <header>
+        <img src="https://assets.onecompiler.app/42wutwx3b/433sgpgnz/%D8%AA%D9%86%D8%B2%D9%8A%D9%84%20(30).png" alt="شعار التطبيق">
         <h1>متطلبات ترخيص الصيدليات</h1>
         <p>توفير الوقت والجهد والمال من خلال الخطوات الإلكترونية</p>
     </header>
@@ -175,7 +185,28 @@
             const license = document.getElementById('license').value;
             const details = document.getElementById('details').value;
 
-            const message = `مرحباً،\n\nأود إرسال الأوراق التالية لترخيص الصيدلية:\n\n- اسم الصيدلي: ${name}\n- رقم الهوية: ${id}\n- رقم ترخيص مزاولة المهنة: ${license}\n\nتفاصيل إضافية:\n${details}\n\nيرجى مراجعة الملفات المرفقة لاحقاً.`;
+            const message = `تحية طيبة وبعد،
+
+السادة الكرام في إدارة ترخيص الصيدليات،
+
+أتقدم إليكم بطلب ترخيص صيدلية وفقًا للإجراءات والمتطلبات المعلنة. يرجى الاطلاع على تفاصيل الطلب أدناه:
+
+- **اسم الصيدلي:** ${name}
+- **رقم الهوية الوطنية:** ${id}
+- **رقم ترخيص مزاولة المهنة:** ${license}
+
+**ملاحظات إضافية:**
+${details || "لا توجد ملاحظات إضافية."}
+
+**مرفقات:**
+سيتم إرسال المرفقات المطلوبة حسب الطلب.
+
+أرجو التكرم بمراجعة الطلب والمرفقات المرفقة والتواصل معي لاستكمال الخطوات اللازمة.
+
+شاكرًا لكم حسن تعاونكم وتفضلوا بقبول خالص الاحترام والتقدير.
+
+مع التحية،  
+${name}`;
             const whatsappNumber = "962781339210";
 
             const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
